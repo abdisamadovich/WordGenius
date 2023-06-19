@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <PathGeometry x:Key="minus" Figures="M5 11h14s1 0 1 1v0s0 1 -1 1h-14s-1 0 -1 -1v0s0 -1 1 -1"/>
+    <PathGeometry x:Key="x" Figures=""/>
+
+</ResourceDictionary> 

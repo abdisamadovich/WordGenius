@@ -29,12 +29,17 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button Style="{DynamicResource MinimizedButton}"/>
+                    <Button Style="{DynamicResource MaximazedButton}"/>
+
+                </StackPanel>
             </Grid>
         </Border>
         
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width ="200"/>
+                <ColumnDefinition Width ="250"/>
                 <ColumnDefinition Width = "*"/>
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0" 
