@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WordGenius.Constans
+﻿namespace WordGenius.Constans
 {
     public class DbConstans
     {
@@ -14,12 +8,10 @@ namespace WordGenius.Constans
         public const string DB_USER = "postgres";
         public const string DB_PASSWORD = "root";
 
-
         public const string DB_CONNECTIONSTRING = $"hOST{DB_HOST} +" +
             $"Port = {DB_PORT}+" +
             $"Datebase = {DB_DATABASE}+" +
             $"User ID = {DB_USER}+" +
             $"Password = {DB_PASSWORD}";
-
     }
 }

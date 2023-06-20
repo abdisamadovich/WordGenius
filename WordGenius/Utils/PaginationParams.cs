@@ -1,4 +1,4 @@
-﻿namespace EduCenter.Desktop.Utils;
+﻿namespace WordGenius.Utils;
 
 public class PagenationParams
 {

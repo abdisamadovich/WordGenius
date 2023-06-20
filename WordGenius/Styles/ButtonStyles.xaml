@@ -42,7 +42,7 @@
                     <Border x:Name="B"
                         Background="#2ABE3E"
                         CornerRadius="25" >
-                        <Path Fill="White" Data="{DynamicResource minus}"/>
+                        <Path Fill="White" Data="{DynamicResource border}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -72,7 +72,7 @@
                     <Border x:Name="B"
                         Background="#F05954"
                         CornerRadius="25" >
-                        <Path Fill="White" Data="{DynamicResource minus}"/>
+                        <Path Fill="White" Data="{DynamicResource x}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">

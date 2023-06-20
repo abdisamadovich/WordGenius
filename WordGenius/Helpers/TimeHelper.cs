@@ -1,7 +1,7 @@
-﻿using EduCenter.Desktop.Constants;
-using System;
+﻿using System;
+using WordGenius.Desktop.Constants;
 
-namespace EduCenter.Desktop.Helpers;
+namespace WordGenius.Helpers;
 
 public class TimeHelper
 {

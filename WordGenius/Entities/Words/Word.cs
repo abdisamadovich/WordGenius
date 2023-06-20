@@ -2,10 +2,10 @@
 
 namespace WordGenius.Entities.Words;
 
-public sealed class Words : Auditable
+public sealed class Word : Auditable
 {
     [MaxLength(50)]
-    public string Word { get; set; } = string.Empty;
+    public string Text { get; set; } = string.Empty;
 
 
     [MaxLength(50)]

@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WordGenius"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="450" 
-        Width="800"
+        Height="700" 
+        Width="1100"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         WindowState="Normal"
@@ -19,7 +19,7 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" 
+        <Border Grid.Row="0"
                 Background="{DynamicResource PrimaryBackground}"
                 CornerRadius=" 10 10 0 0"
                 BorderBrush="{DynamicResource PrimaryBorderColor}"
@@ -30,8 +30,9 @@
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
-                    <Button Style="{DynamicResource MinimizedButton}"/>
-                    <Button Style="{DynamicResource MaximazedButton}"/>
+                    <Button x:Name="MinimizedBtn" Click="MinimizedBtn_Click" Style="{DynamicResource MinimizedButton}"/>
+                    <Button x:Name="MaxsimizedBtn" Click="MaxsimizedBtn_Click" Style="{DynamicResource MaximazedButton}"/>
+                    <Button x:Name="CloseBtn" Click="CloseBtn_Click" Style="{DynamicResource CloseButton}"/>
 
                 </StackPanel>
             </Grid>
@@ -44,10 +45,10 @@
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0" 
                     Background="{DynamicResource PrimaryBackground}"
-                    CornerRadius="0 0 0 10">
+                    CornerRadius="0 0 0 10"> 
                 
             </Border>
-            <Border Grid.Column="1" 
+            <Border Grid.Column="1"
                     Background="{DynamicResource SecondaryBackground}"
                     CornerRadius="0 0 10 0">
                 

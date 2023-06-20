@@ -1,4 +1,4 @@
-﻿namespace EduCenter.Desktop.Constants;
+﻿namespace WordGenius.Desktop.Constants;
 
 public class TimeConstants
 {
