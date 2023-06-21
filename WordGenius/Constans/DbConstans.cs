@@ -8,10 +8,10 @@
         public const string DB_USER = "postgres";
         public const string DB_PASSWORD = "root";
 
-        public const string DB_CONNECTIONSTRING = $"hOST{DB_HOST} +" +
-            $"Port = {DB_PORT}+" +
-            $"Datebase = {DB_DATABASE}+" +
-            $"User ID = {DB_USER}+" +
+        public const string DB_CONNECTIONSTRING = $"Host = {DB_HOST};" +
+            $"Port = {DB_PORT};" +
+            $"Datebase = {DB_DATABASE};" +
+            $"User ID = {DB_USER};" +
             $"Password = {DB_PASSWORD}";
     }
 }

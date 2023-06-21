@@ -15,7 +15,7 @@ public sealed class Word : Auditable
     public string Discription { get; set; } = string.Empty;
 
 
-    public int[] Sounds { get; set; }
+    public byte[] Sounds { get; set; }
 
 
     public bool Is_Remember { get; set; } = false;
