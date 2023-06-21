@@ -25,26 +25,33 @@ namespace WordGenius
             InitializeComponent();
         }
 
-        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.DragMove();
         }
 
-        private void MaxsimizedBtn_Click(object sender, RoutedEventArgs e)
+        private void BtnMaximize_Click(object sender, RoutedEventArgs e)
         {
             if(this.WindowState == WindowState.Maximized)
             {
                 this.WindowState = WindowState.Normal;
             }
-            else
-            {
-                this.WindowState = WindowState.Maximized;
-            }
+            else this.WindowState = WindowState.Maximized;
         }
 
-        private void MinimizedBtn_Click(object sender, RoutedEventArgs e)
+        private void BtnMinimize_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            this.WindowState= WindowState.Minimized;
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

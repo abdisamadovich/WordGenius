@@ -10,19 +10,19 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="B"
-                        Background="#F2B22D"
+                        Background="#2ABE3E"
                         CornerRadius="25" >
-                        <Path Fill="White" Data="{DynamicResource minimize}"/>
+                        <Path Fill="#2ABE3E" Data="{DynamicResource minimize}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="B" Property="Background" Value="#DEA529"/>
+                            <Setter TargetName="B" Property="Background" Value="#2ABE3E"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter TargetName="B" Property="Background" Value="#F2B22D"/>
+                            <Setter TargetName="B" Property="Background" Value="#2ABE3E"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="B" Property="Background" Value="#C49124"/>
+                            <Setter TargetName="B" Property="Background" Value="#2ABE3E"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -40,19 +40,19 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="B"
-                        Background="#2ABE3E"
+                        Background="#f2b22d"
                         CornerRadius="25" >
-                        <Path Fill="#ffff" Data="{DynamicResource maximize}" Height="12" Width="12" Stretch="UniformToFill"/>
+                        <Path Fill="#f2b22d" Data="{DynamicResource maximize}" Height="12" Width="12" Stretch="UniformToFill"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="B" Property="Background" Value="#26A636"/>
+                            <Setter TargetName="B" Property="Background" Value="#f2b22d"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
-                            <Setter TargetName="B" Property="Background" Value="#2ABE3E"/>
+                            <Setter TargetName="B" Property="Background" Value="#f2b22d"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="B" Property="Background" Value="#219430"/>
+                            <Setter TargetName="B" Property="Background" Value="#f2b22d"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -72,17 +72,17 @@
                     <Border x:Name="B"
                         Background="#F05954"
                         CornerRadius="25" >
-                        <Path Fill="White" Data="{DynamicResource close}"/>
+                        <Path Fill="#F05954" Data="{DynamicResource close}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="B" Property="Background" Value="#D8504B"/>
+                            <Setter TargetName="B" Property="Background" Value="#F05954"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
                             <Setter TargetName="B" Property="Background" Value="#F05954"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="B" Property="Background" Value="#C14843"/>
+                            <Setter TargetName="B" Property="Background" Value="#F05954"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -90,5 +90,53 @@
         </Setter>
     </Style>
 
-
+    <Style x:Key="MenuButton" TargetType="{x:Type RadioButton}">
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="0 5 0 5"/> 
+        <Setter Property="Template"> 
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="B" CornerRadius="5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="Indicator" Grid.Column="0"
+                                    Visibility="Collapsed"
+                                    Height="30"
+                                    CornerRadius="5"
+                                    Background="{DynamicResource SecondaryBackground}"/>
+                            <Label x:Name="MenuText" Grid.Column="2"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       Foreground="White"
+                                       FontFamily="Segoi UI"
+                                       VerticalAlignment="Center"
+                                       Content ="{TemplateBinding Content}" 
+                                       />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="B" Property="Background" Value="transparent"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="{DynamicResource SelectedBackground}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="{DynamicResource SelectedBackground}"/>
+                            <Setter TargetName="Indicator" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="MenuText" Property="Foreground" Value="{DynamicResource TextColorChecked}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        
+    </Style>     
 </ResourceDictionary>
