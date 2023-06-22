@@ -38,7 +38,7 @@ class WordRepository : BaseRepository, IWordsRepository
                 command.Parameters.AddWithValue("name", Obj.Text);
                 command.Parameters.AddWithValue("translate", Obj.Translate);
                 command.Parameters.AddWithValue("discription", Obj.Discription);
-              //  command.Parameters.AddWithValue("sound", Obj.Sounds);
+                command.Parameters.AddWithValue("sound", Obj.Sounds);
                 command.Parameters.AddWithValue("isremember", Obj.Is_Remember);
                 command.Parameters.AddWithValue("created_at", Obj.CreateAt);
                 command.Parameters.AddWithValue("updated_at", Obj.UpdateAt); 
