@@ -86,9 +86,6 @@ namespace WordGenius
             PageNavigator.Content=aboutPage;
         }
 
-        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
+      
     }
 }
