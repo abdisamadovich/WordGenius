@@ -18,9 +18,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
-
         </Grid.RowDefinitions>
-        <Border Grid.Row="0"
+        <Border Grid.Row="0" 
                 Background="{DynamicResource PrimaryBackground}"
                 CornerRadius="10 10 0 0">
             <Grid Margin="10 0 10 0">
@@ -45,10 +44,15 @@
                            Margin="10 5 5 5">
                     </Label>
                 </Border>
-                <TextBox Grid.Column="1" 
+                <Border Grid.Column="1"
+                        CornerRadius="5 5 5 5"
+                        Margin="5">
+                    <TextBox 
                          Style="{DynamicResource TextBoxKey}"
                          TextChanged="TextBox_TextChanged">
-                </TextBox>
+                    </TextBox>
+                </Border>
+
 
                 <StackPanel Grid.Column="2"
                             Orientation="Horizontal"
@@ -74,9 +78,11 @@
                 </StackPanel>
             </Grid>
         </Border>
-        <Border Grid.Row="1"
+        <Border
                 Background="{DynamicResource PrimaryBackground}"
-                CornerRadius="0 0 10 10">
+                CornerRadius="0 0 10 10" 
+                Margin="0,49,0,5" 
+                Grid.RowSpan="2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="250"/>
@@ -85,24 +91,50 @@
                 <Border Grid.Row="0"
                     Background="{DynamicResource SecondaryBackground}"                                     
                     CornerRadius="0 10 0 10">
-                    <StackPanel>
-                        <RadioButton x:Name="rb1" 
+                    <StackPanel
+                        Margin="0 20 0 0">
+                        <RadioButton x:Name="rbHome" 
                         Style="{DynamicResource MenuButton}"
-                        Content="Birinchisi">
+                        Content="Home" Height="70" Width="220"
+                        Click="rbHome_Click"
+                        Tag="{DynamicResource home}" Margin="10">
                         </RadioButton>
-                        <RadioButton x:Name="rb2" 
+                        <RadioButton x:Name="rbWords"
+                        Margin="10"
                         Style="{DynamicResource MenuButton}"
-                        Content="Ikkinchi">
+                        Content="Words" Height="70" Width="220"
+                        Click="rbWords_Click"
+                        Tag="{DynamicResource words}">
                         </RadioButton>
-                        <RadioButton x:Name="rb3" 
+                        <RadioButton x:Name="rbTest" 
+                        Margin="10"
+                        Height="70" Width="220"
                         Style="{DynamicResource MenuButton}"
-                        Content="Uchinchi">
+                        Content="Test"
+                        Click="rbTest_Click"
+                        Tag="{DynamicResource test}"
+                        >
                         </RadioButton>
-                        <RadioButton x:Name="rb4" 
+                        <RadioButton x:Name="rbTranslate" Margin="10"
                         Style="{DynamicResource MenuButton}"
-                        Content="To'rtinchi">
+                        Content="Translate" Height="70" Width="220"
+                        Click="rbTranslate_Click"
+                        Tag="{DynamicResource translate}">
+                        </RadioButton>
+                        <RadioButton x:Name="rbAbout" Margin="10"
+                        Style="{DynamicResource MenuButton}"
+                        Content="About" Height="70" Width="220"
+                        Click="rbAbout_Click"
+                        Tag="{DynamicResource about}">
                         </RadioButton>
                     </StackPanel>
+                </Border>
+                <Border Grid.Column="1"
+                        CornerRadius="0 0 10 0"
+                        >
+                    <Frame x:Name="PageNavigator"
+                           
+                           NavigationUIVisibility="Hidden"/>
                 </Border>
             </Grid>
         </Border>
