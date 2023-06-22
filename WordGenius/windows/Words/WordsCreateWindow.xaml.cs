@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WordGenius.windows.Words;
 
-namespace WordGenius.Pages
+namespace WordGenius.windows.Words
 {
     /// <summary>
-    /// Interaction logic for WordsPage.xaml
+    /// Interaction logic for WordsCreateWindow.xaml
     /// </summary>
-    public partial class WordsPage : Page
+    public partial class WordsCreateWindow : Window
     {
-        public WordsPage()
+        public WordsCreateWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnCreate_Click(object sender, RoutedEventArgs e)
-        {
-            WordsCreateWindow wordsCreateWindow = new WordsCreateWindow();
-            wordsCreateWindow.ShowDialog();
         }
     }
 }

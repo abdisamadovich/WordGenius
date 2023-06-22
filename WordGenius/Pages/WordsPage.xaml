@@ -8,9 +8,83 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="WordsPage">
 
-    <Grid>
-        <Label Background="Aqua">
-            Words
-        </Label>
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="70"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0">
+                <Border Height="30" 
+                        CornerRadius="10"
+                        Width="100"
+                        Background="White"
+                        BorderBrush="Black"
+                        BorderThickness="1" Margin="0,5,0,5">
+                    <Button x:Name="btnCreate"
+                            Click="btnCreate_Click"
+                            Margin="3,3,3,3"
+                            Background="White"
+                            BorderBrush="White"
+                            BorderThickness="1"
+                            Content="Create"
+                            >
+                        
+                    </Button>
+
+                </Border>
+            </Border>
+            <StackPanel Grid.Column="1"
+                        Orientation="Horizontal">
+                <Border Height="30" 
+                        CornerRadius="10"
+                        Background="White"
+                        Width="350"
+                        BorderBrush="Black"
+                        BorderThickness="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Path Height="25" Width="25" Stroke="#DDE6ED" StrokeThickness="1"
+                             Fill="{DynamicResource PrimaryBackground}"
+                             Data="{DynamicResource searche}"/>
+                        <TextBox x:Name="tbSearch"
+                                 Grid.Column ="1"
+                                 MaxLength="50"                                 
+                                 VerticalAlignment="Center"
+                                 FontSize="16"
+                                 FontFamily="Jetbrain Mono"
+                                 BorderThickness="0"
+                                 Margin="5 0 5 0"
+                                 >
+                        </TextBox>
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <Border Grid.Column="2"
+                    CornerRadius="10"
+                    Width="60" 
+                    Background="White" 
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    Margin="2,5,2,5">
+                <Button Background="White"
+                        Margin="5"
+                        BorderThickness="0"
+                        BorderBrush="White"
+                        >
+                </Button>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1" Background="Aquamarine">
+            
+        </Grid>
     </Grid>
 </Page>

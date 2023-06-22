@@ -15,10 +15,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0" Background="{DynamicResource PrimaryBackground}">
+            <Grid Grid.Column="0" 
+                  Background="{DynamicResource PrimaryBackground}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
                 <Border Grid.Row="0">
                     <Grid>
@@ -45,19 +47,35 @@
                         </StackPanel>
                     </Grid>
                 </Border>
-                <Border Margin="5 5 5 5" 
-                        Grid.Row="1" 
+                <Border Grid.Row="1" 
+                        Margin="5 5 5 5" 
                         Background="White" 
                         CornerRadius="10 10 10 10">
-                    <TextBox Margin="5">
-                        
-                    </TextBox>
+                    <RichTextBox Margin="5">
+
+                    </RichTextBox>
+                </Border>
+                <Border Grid.Row="2">
+                    <Button Grid.Row="2"
+                            Width="70"
+                            Height="30"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Content="Start"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Margin="0 0 10 0"
+                            Background="White"
+                            FontWeight="SemiBold"
+                            FontSize="16">
+                    </Button>
                 </Border>
             </Grid>
             <Grid Grid.Column="1" Background = "{DynamicResource PrimaryBackground}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
                 <Border Grid.Column="0" 
                                 CornerRadius="10"
@@ -70,10 +88,25 @@
                 <Border Grid.Row="1" 
                         Background="#f6f6f6"
                         CornerRadius="10 10 10 10"
-                        Margin="5 5 5 5">
-                    <TextBox Margin="5">
-                        
-                    </TextBox>
+                        Margin="5 5 5 5"
+                        >
+                    <RichTextBox Margin="5" Background="#f6f6f6">
+
+                    </RichTextBox>
+                </Border>
+                <Border Grid.Row="2"                       
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Right" 
+                        Width="70">
+                    <Label BorderBrush="Black"
+                           BorderThickness="1" 
+                           Foreground="Black"
+                           FontSize="16"
+                           FontFamily="JetBrain Mono"
+                           FontStyle="Normal"
+                           FontWeight="SemiBold"
+                           Background="White" 
+                           Margin="0,0,10,0">Copy</Label>
                 </Border>
             </Grid>
         </Grid>

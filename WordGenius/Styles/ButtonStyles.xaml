@@ -161,4 +161,39 @@
         </Setter>
     </Style>
 
+    <Style x:Key="SaveButton" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="10 0" />
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="B" CornerRadius="5" Background="Green">
+                        <Label FontSize="18"
+                               Margin="10 0"
+                               FontFamily="Jetbrain Mono"
+                               FontWeight="SemiBold"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Content="{TemplateBinding Content}">
+                            
+                        </Label>
+                        
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName ="B"  Property="Background" Value="DarkGreen" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName ="B"  Property="Background" Value="DarkGreen" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName ="B"  Property="Background" Value="DarkGreen" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

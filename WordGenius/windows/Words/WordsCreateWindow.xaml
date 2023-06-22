@@ -1,0 +1,84 @@
+﻿<Window x:Class="WordGenius.windows.Words.WordsCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WordGenius.windows.Words"
+        mc:Ignorable="d"
+        Title="Create Word" 
+        Height="600" Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        >
+    <Window.Resources>
+        <Style x:Key="WordLabel" TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="red"/>
+            <Setter Property="FontFamily" Value="Jetbrain Mono"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0 5"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="{DynamicResource PrimaryBackground}">
+        <StackPanel Orientation="Vertical"
+                    Margin="20">
+            <Label Content="Word" Style="{DynamicResource WordLabel}"/>
+            <Border Height="35" 
+                    CornerRadius="10"
+                    Background="White"
+                        
+                        BorderBrush="Black"
+                        BorderThickness="1">
+                
+                <TextBox x:Name="tbWord"
+                                 Grid.Column ="1"
+                                 MaxLength="50"                                 
+                                 VerticalAlignment="Center"
+                                 FontSize="16"
+                                 FontFamily="Jetbrain Mono"
+                                 BorderThickness="0"
+                                 Margin="10 0 10 0"
+                                 >
+                </TextBox>
+
+            </Border>
+            <Label Content="Translate" Style="{DynamicResource WordLabel}"/>
+            <Border     Height="35" 
+                        CornerRadius="10"
+                        Background="White"                      
+                        BorderBrush="Black"
+                        BorderThickness="1">
+                <TextBox x:Name="tbTranslate"
+                                 Grid.Column ="1"
+                                 MaxLength="50"                                 
+                                 VerticalAlignment="Center"
+                                 FontSize="16"
+                                 FontFamily="Jetbrain Mono"
+                                 BorderThickness="0"
+                                 Margin="10 0 10 0">
+                </TextBox>
+            </Border>
+            <Label Content="Description" Style="{DynamicResource WordLabel}"/>
+            <Border     Height="200" 
+                        CornerRadius="10"
+                        Background="White"                     
+                        BorderBrush="Black"
+                        BorderThickness="1">
+                <RichTextBox x:Name="tbDescription"
+                                 Grid.Column ="1"                                                                
+                                 VerticalAlignment="Center"
+                                 FontSize="16"
+                                 FontFamily="Jetbrain Mono"
+                                 BorderThickness="0" 
+                                 Height="190"
+                         Margin="5"/>
+
+            </Border>
+            <Button Style="{DynamicResource SaveButton}" 
+                    Height="40"
+                    Margin="0 10"
+                    Content="Save">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
