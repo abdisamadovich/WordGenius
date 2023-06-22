@@ -85,5 +85,10 @@ namespace WordGenius
             AboutPage aboutPage = new AboutPage();
             PageNavigator.Content=aboutPage;
         }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

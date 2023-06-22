@@ -13,13 +13,8 @@ using WordGenius.Utils;
 
 namespace WordGenius.Repositories.Words;
 
-class WordRepository : IWordsRepository
+class WordRepository : BaseRepository, IWordsRepository
 {
-    private readonly NpgsqlConnection _connection;
-    public WordRepository()
-    {
-        _connection = new NpgsqlConnection(DbConstans.DB_CONNECTIONSTRING);
-    }
 
     public Task<int> CountAsync()
     {

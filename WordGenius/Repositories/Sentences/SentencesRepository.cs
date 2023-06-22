@@ -9,7 +9,7 @@ using WordGenius.Utils;
 
 namespace WordGenius.Repositories.Sentences;
 
-internal class SentencesRepository : ISentenceRepository
+internal class SentencesRepository : BaseRepository, ISentenceRepository
 {
     public Task<int> CountAsync()
     {

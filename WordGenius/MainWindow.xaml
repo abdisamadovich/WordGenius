@@ -21,7 +21,8 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" 
                 Background="{DynamicResource PrimaryBackground}"
-                CornerRadius="10 10 0 0">
+                CornerRadius="10 10 0 0"
+                BorderThickness="0">
             <Grid Margin="10 0 10 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="400"/>
