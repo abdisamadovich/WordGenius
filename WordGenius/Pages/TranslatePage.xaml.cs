@@ -14,6 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net.Http.Headers;
+using WordGenius.Entities.Translator;
+using Newtonsoft.Json;
+using System.Net.Http.Json;
 
 namespace WordGenius.Pages
 {
@@ -27,11 +30,11 @@ namespace WordGenius.Pages
             InitializeComponent();
         }
 
-        private async void btReverse_Click(object sender, RoutedEventArgs e)
+        private void BtReverse_Click(object sender, RoutedEventArgs e)
         {
-            string s =await Translate("uz","en","salom");
-            MessageBox.Show(s);
-
+            string temp = FromLb.Content.ToString()!;
+            FromLb.Content = toLb.Content;
+            toLb.Content = temp;
         }
 
         public static async Task<string> Translate(string from, string to, string text)
@@ -48,9 +51,9 @@ namespace WordGenius.Pages
                             },
                 Content = new FormUrlEncodedContent(new Dictionary<string, string>
                  {
-                     { "q", "Hello" },
-                     { "target", "uz" },
-                     { "source", "en" },
+                     { "q", $"{text}" },
+                     { "target", $"{to}" },
+                     { "source", $"{from}" },
                  }),
             };
             using (var response = await client.SendAsync(request))
@@ -59,6 +62,18 @@ namespace WordGenius.Pages
                 body = await response.Content.ReadAsStringAsync();
             }
             return body;
+        }
+
+        private async void StartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //string text = new TextRange(rchTb.Document.ContentStart, rchTb.Document.ContentEnd).Text;
+            string text = rchTb.Text;
+            string from = FromLb.Content.ToString()!;
+            string to = toLb.Content.ToString()!;
+            string JsonContent = await Translate(from,to,text);
+            TranslationResponse transtation = JsonConvert.DeserializeObject<TranslationResponse>(JsonContent);
+            translate.Content = transtation.data.translations[0].translatedText;
+
         }
     }
 }

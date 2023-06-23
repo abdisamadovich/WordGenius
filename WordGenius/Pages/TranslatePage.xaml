@@ -34,13 +34,13 @@
                                 BorderThickness="1"
                                 Background="#DDE6ED" 
                                 Margin="5 5 5 5">
-                            <Label>Uz</Label>
+                            <Label x:Name="FromLb">uz</Label>
                         </Border>
                         <StackPanel Grid.Column="1" Background="{DynamicResource PrimaryBackground}" 
                                 Margin="5">
                             <Button x:Name="btReverse" 
                                     Tag="{DynamicResource reverse}"
-                                    Click="btReverse_Click"
+                                    Click="BtReverse_Click"
                                     Style="{DynamicResource ReverseButton}" 
                                     Height="30">
                             </Button>
@@ -51,12 +51,12 @@
                         Margin="5 5 5 5" 
                         Background="White" 
                         CornerRadius="10 10 10 10">
-                    <RichTextBox Margin="5">
+                    <TextBox x:Name="rchTb"  Margin="5">
 
-                    </RichTextBox>
+                    </TextBox>
                 </Border>
                 <Border Grid.Row="2">
-                    <Button Grid.Row="2"
+                    <Button x:Name="StartBtn" Grid.Row="2"
                             Width="70"
                             Height="30"
                             VerticalAlignment="Center"
@@ -67,6 +67,7 @@
                             Margin="0 0 10 0"
                             Background="White"
                             FontWeight="SemiBold"
+                            Click="StartBtn_Click"
                             FontSize="16">
                     </Button>
                 </Border>
@@ -83,16 +84,18 @@
                                 BorderThickness="1"
                                 Background="#DDE6ED" 
                                 Margin="5 5 5 5">
-                    <Label>Eng</Label>
+                    <Label x:Name="toLb">en</Label>
                 </Border>
                 <Border Grid.Row="1" 
                         Background="#f6f6f6"
                         CornerRadius="10 10 10 10"
                         Margin="5 5 5 5"
                         >
-                    <RichTextBox Margin="5" Background="#f6f6f6">
+                    <Label x:Name="translate"
+                                Margin="5"
+                                 Background="#f6f6f6">
 
-                    </RichTextBox>
+                    </Label>
                 </Border>
                 <Border Grid.Row="2"                       
                         VerticalAlignment="Center" 
